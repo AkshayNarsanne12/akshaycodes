@@ -3,7 +3,7 @@
 
 //started with object oriented c++
 //classes and objects
-//just keeping things safe
+//just keeping things safe yes its safe
  int main()
  {
     return 0;
