@@ -4,7 +4,7 @@ using namespace std;
 void swap(int *a,int *b);
 int main()
 {
-/*
+/*  its akshay
     int num{10};
     cout<<"value of num is :"<<num<<endl;
     cout<<"Size of num is :"<<sizeof num<<endl;
