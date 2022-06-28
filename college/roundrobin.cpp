@@ -1,4 +1,5 @@
-#include<stdio.h>
+#include<bits/stdc++.h>
+using namespace std;
  
 int main()
 {
@@ -25,7 +26,7 @@ int main()
  
       printf("\nEnter Time Quantum 't':");
       scanf("%d", &time_quantum);
-      printf("\nProcess IDttBurst Timet Turnaround Timet Waiting Timen");
+      printf("\nProcess ID\t\tBurst Timet Turnaround Timet Waiting Timen");
       for(total = 0, i = 0; x != 0;)
       {
             if(temp[i] <= time_quantum && temp[i] > 0)
@@ -42,7 +43,7 @@ int main()
             if(temp[i] == 0 && counter == 1)
             {
                   x--;
-                  printf("\nProcess[%d]tt%dtt %dttt %d", i + 1, burst_time[i], total - arrival_time[i], total - arrival_time[i] - burst_time[i]);
+                  printf("\nProcess[%d]\t\t%dtt %d\t\t\t %d", i + 1, burst_time[i], total - arrival_time[i], total - arrival_time[i] - burst_time[i]);
                   wait_time = wait_time + total - arrival_time[i] - burst_time[i];
                   turnaround_time = turnaround_time + total - arrival_time[i];
                   counter = 0;
@@ -63,7 +64,7 @@ int main()
  
       average_wait_time = wait_time * 1.0 / limit;
       average_turnaround_time = turnaround_time * 1.0 / limit;
-      printf("\nAverage Waiting Time:t%f\n", average_wait_time);
-      printf("\nAvg Turnaround Time:t%f\n", average_turnaround_time);
+      printf("\nAverage Waiting Time:\t%f\n", average_wait_time);
+      printf("\nAvg Turnaround Time:\t%f\n", average_turnaround_time);
       return 0;
 }

@@ -2,17 +2,11 @@
 using namespace std;
  int main()
 {
-    int bt[20],p[20],wt[20],tat[20],i,j,n,total=0,pos,temp;
+    int wt[20],tat[20],i,j,n,total=0,pos,temp;
     float avg_wt,avg_tat;
-    printf("\n Enter number of process:");
-    scanf("%d",&n);
-    printf("\n Enter Burst Time:\n");
-    for(i=0;i<n;i++)
-    {
-        printf("p%d:",i+1);
-        scanf("%d",&bt[i]);
-        p[i]=i+1;         
-    }
+    int p[] = { 1, 2, 3, 4};
+    n = sizeof p / sizeof p[0];
+    int bt[] = {8,10,9,5};
    //sorting of burst times
     for(i=0;i<n;i++)
     {
@@ -22,12 +16,8 @@ using namespace std;
             if(bt[j]<bt[pos])
                 pos=j;
         }
-        temp=bt[i];
-        bt[i]=bt[pos];
-        bt[pos]=temp;
-        temp=p[i];
-        p[i]=p[pos];
-        p[pos]=temp;
+        swap(bt[i],bt[pos]);
+        swap(p[i],p[pos]);
     }
     wt[0]=0;           
     for(i=1;i<n;i++)
@@ -38,15 +28,15 @@ using namespace std;
         total+=wt[i];
     }
     avg_wt=(float)total/n;      
-    total=0
-    printf("\nProcesst    Burst Time    tWaiting TimetTurnaround Time");
+    total=0;
+    printf("\nProcesst    Burst Time    Waiting Time Turnaround Time");
     for(i=0;i<n;i++)
     {
         tat[i]=bt[i]+wt[i];   
         total+=tat[i];
-        printf("\np%d      %d    %d       %d",p[i],bt[i],wt[i],tat[i]);
+        cout<<p[i]<<"\t"<<bt[i]<<"\t"<<wt[i]<<"\t"<<tat[i]<<endl;
     }
-  avg_tat=(float)total/n;    
+    avg_tat=(float)total/n;    
     printf("\nAverage Waiting Time=%f",avg_wt);
     printf("\nAverage Turnaround Time=%fn",avg_tat);
 }

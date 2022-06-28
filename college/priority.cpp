@@ -17,7 +17,7 @@ int main()
         scanf("%d",&pr[i]);
         p[i]=i+1;           //contains process number
     }
- 
+
     //sorting burst time, priority and process number in ascending order using selection sort
     for(i=0;i<n;i++)
     {
