@@ -27,15 +27,14 @@ int insertx(int *arr,int index,int x,int &size)
     size++;
 
 }
-void delete(int x,int m)
-{
-    int x = 0;
-    if( )
-    for(int i=m;size-1;i++)
-    {
-        arr[i]
-    }
-}
+// void delete(int x,int m)
+// {
+//     int x = 0;
+//     for(int i=m;size-1;i++)
+//     {
+//         arr[i]
+//     }
+// }
 int main()
 {
     int n;
