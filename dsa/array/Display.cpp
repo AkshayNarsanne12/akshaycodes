@@ -27,14 +27,14 @@ int insertx(int *arr,int index,int x,int &size)
     size++;
 
 }
-// void delete(int x,int m)
-// {
-//     int x = 0;
-//     for(int i=m;size-1;i++)
-//     {
-//         arr[i]
-//     }
-// }
+int delete(int *arr,int x,int m)
+{
+    int x = 0;
+    for(int i=m;size-1;i++)
+    {
+        arr[i]
+    }
+}
 int main()
 {
     int n;
@@ -58,8 +58,12 @@ int main()
     cout<<"enter the value to insert :"<<endl;
     int x;
     cin>>x;
+    cout<<"enter the index to delete :"<<endl;
+    int y;
+    cin>>x;
 
     insertx(arr,m,x,n);
+    delete(arr,)
     display(arr,n);
     return 0;
 }
